@@ -1,26 +1,33 @@
 import React from "react";
-import axios from "axios";
+import WeatherInfo from "./WeatherInfo";
+import "./Weather.css";
+import WeatherForecast from "./WeatherForecast";
+import Footer from "./footer";
 
-import { Audio } from "react-loader-spinner";
-
-export default function Weather(props) {
-  function showWeather(response) {
-    alert(
-      `it is currently ${response.data.main.temp}°c in ${response.data.name}`
-    );
-  }
-  let apiKey = "f72458c09ad644eba2a16441fd1ee46a";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showWeather);
+export default function Weather() {
   return (
-    <Audio
-      height="80"
-      width="80"
-      radius="9"
-      color="green"
-      ariaLabel="three-dots-loading"
-      wrapperStyle
-      wrapperClass
-    />
+    <div className="Weather">
+      <form className="mb-5">
+        <div className="row">
+          <div className="col-9">
+            <input
+              type="search"
+              placeholder="Enter a city..."
+              className="form-control search-input"
+            />
+          </div>
+          <div className="col-3 p-o">
+            <input
+              type="submit"
+              className="btn btn-primary w-100"
+              value="search"
+            />
+          </div>
+        </div>
+      </form>
+      <WeatherInfo />
+      <WeatherForecast />
+      <Footer />
+    </div>
   );
 }
