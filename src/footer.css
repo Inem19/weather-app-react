@@ -5,3 +5,12 @@ footer {
   margin-top: 40px;
   text-align: center;
 }
+
+footer a {
+  text-decoration: none;
+  color: #f65282;
+}
+
+footer span {
+  color: #f65282;
+}
