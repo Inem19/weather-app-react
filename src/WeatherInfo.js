@@ -1,16 +1,17 @@
 import React from "react";
 import "./WeatherInfo.css";
 
-export default function WeatherInfo() {
+export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <div className="row">
         <div className="col-6">
-          <h1>London</h1>
+          <h1>{props.data.city}</h1>
           <ul>
-            <li>Wednesday 16:33, clouds</li>
+            <li>Wednesday 16:33, {props.data.description}</li>
             <li>
-              Humidity:<strong>72%</strong>,Wind:<strong>3km/h</strong>
+              Humidity:<strong>{props.data.humidity}%</strong>,Wind:
+              <strong>{props.data.wind}km/h</strong>
             </li>
           </ul>
         </div>
@@ -21,7 +22,9 @@ export default function WeatherInfo() {
               alt="sun"
             />
             <div>
-              <span className="Temperature">7</span>
+              <span className="Temperature">
+                {Math.round(props.data.temperature)}
+              </span>
               <span className="Unit">°C</span>
             </div>
           </div>
