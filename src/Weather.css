@@ -27,9 +27,9 @@
 
 .Weather .btn {
   background: #4ab5b4;
-  border: none;
+  font-weight: bold;
   font-size: 16px;
-  font-weight: 700;
-  height: 50px;
   padding: 15px 0;
+  border: none;
+  height: 50px;
 }
