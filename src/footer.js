@@ -5,7 +5,14 @@ export default function Footer() {
   return (
     <footer>
       This project was coded by <span>Aniebiet-abasi Akpan,</span> and is{" "}
-      <a href="https://github.com/Inem19/weather-app-react">open-sourced</a> and
+      <a
+        href="https://github.com/Inem19/weather-app-react"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        open-sourced
+      </a>{" "}
+      and
       <a
         href="https://idyllic-tarsier-f3064b.netlify.app/"
         target="_blank"
